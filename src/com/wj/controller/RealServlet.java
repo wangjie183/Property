@@ -22,7 +22,7 @@ public class RealServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationcontext-mybatis.xml");
+	private ApplicationContext ctx=new ClassPathXmlApplicationContext("/Property/resources/applicationcontext-mybatis.xml");
     private Real_EstateService re=(Real_EstateService) ctx.getBean("realService");
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-    private ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationcontext-mybatis.xml");
+    public ApplicationContext ctx=new ClassPathXmlApplicationContext("/Property/resources/applicationcontext-mybatis.xml");
     private UsersService us=(UsersService) ctx.getBean("userService");
     private boolean isOK;
     private Users user;

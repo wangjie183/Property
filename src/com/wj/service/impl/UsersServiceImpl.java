@@ -13,7 +13,6 @@ import com.wj.service.UsersService;
 @Service("userService")
 public class UsersServiceImpl implements UsersService {
 	@Autowired
-	//����һ��dao�����
 	@Qualifier("usersDao")
 	private UsersDao usersDao;
 	@Override
@@ -24,7 +23,6 @@ public class UsersServiceImpl implements UsersService {
 			return false;
 		}		
 	}
-	@Transactional(propagation = Propagation.REQUIRED)
 	@Override
 	public boolean addUsers(Users user) {
 		if(usersDao.addUsers(user)>0) {
